@@ -1,0 +1,52 @@
+.is-boxed {
+    background: lighten(desaturate(color(bg, 1), 15%), 2%);
+}
+
+.body-wrap {
+    background: color(bg, 1);
+    overflow: hidden;
+    /* Sticky footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.boxed-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    @include shadow;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.section-inner {
+    position: relative; /* To always display inner elements above pseudo decorative stuff */
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+@include media( '>medium' ) {
+
+    .section-inner {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+*{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+
+.float{
+	position:fixed;
+	bottom:100px;
+	right:50px;
+	color:#FFF;
+	text-align:center;
+}
